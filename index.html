@@ -37,7 +37,18 @@
     <title>Let me Google that for you</title>
   </head>
 
-  <body>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <div></div>
+        <button
+          class="btn bi-brightness-high btn-light"
+          onclick="toggleBrightness()"
+        ></button>
+      </div>
+    </nav>
+
     <!-- Content -->
     <div class="container">
       <form class="row g-3 text-center mt-5">
@@ -52,7 +63,7 @@
         <!-- Input -->
         <div
           class="
-            bg-body
+            bg-light
             border border-1 border-light
             input-group
             rounded-pill
@@ -60,12 +71,12 @@
           "
         >
           <label
-            class="input-group-text bi-search bg-body border-0"
+            class="bg-light bi-search border-0 input-group-text text-dark"
             for="input"
             id="searchicon"
           ></label>
           <input
-            class="form-control border-0 bg-body"
+            class="form-control border-0 bg-light text-dark"
             id="input"
             maxlength="2048"
             name="search"

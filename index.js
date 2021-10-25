@@ -19,6 +19,8 @@ window.addEventListener("load", async () => {
   input = document.getElementById("input")
   input.value = ""
 
+  setBrightness(JSON.parse(localStorage.getItem("dark") ?? "false"))
+
   if (!query.search) return
 
   await setMessage("Step 1", "Type in your question")
@@ -46,8 +48,10 @@ window.addEventListener("load", async () => {
 })
 
 function makeCursor() {
+  const dark = JSON.parse(localStorage.getItem("dark") ?? "false")
+
   const cursor = document.createElement("span")
-  cursor.className = "bi-cursor-fill"
+  cursor.className = `bi-cursor-fill text-${dark ? "light" : "dark"}`
   cursor.id = "cursor"
   document.body.appendChild(cursor)
   return cursor
@@ -116,4 +120,40 @@ async function setMessage(heading, content, type = "alert-primary") {
 
   message.classList.remove("opacity-0")
   await new Promise(resolve => setTimeout(resolve, 300))
+}
+
+function toggleBrightness() {
+  const dark = JSON.parse(localStorage.getItem("dark") ?? "false")
+  localStorage.setItem("dark", !dark)
+  setBrightness(!dark)
+}
+
+/**
+ * Apply brightness on the page.
+ * @param {boolean} dark
+ */
+function setBrightness(dark) {
+  const newbrightness = dark ? "dark" : "light"
+  const oldBrightness = dark ? "light" : "dark"
+
+  for (const oldClass of [
+    `bg-${oldBrightness}`,
+    `navbar-${oldBrightness}`,
+    `btn-${oldBrightness}`,
+    `border-${oldBrightness}`,
+  ]) {
+    const newClass = oldClass.replace(oldBrightness, newbrightness)
+    for (const element of document.querySelectorAll(`.${oldClass}`)) {
+      element.classList.remove(oldClass)
+      element.classList.add(newClass)
+    }
+  }
+
+  for (const oldClass of [`text-${newbrightness}`]) {
+    const newClass = oldClass.replace(newbrightness, oldBrightness)
+    for (const element of document.querySelectorAll(`.${oldClass}`)) {
+      element.classList.remove(oldClass)
+      element.classList.add(newClass)
+    }
+  }
 }

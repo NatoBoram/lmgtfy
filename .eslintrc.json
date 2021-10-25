@@ -21,6 +21,7 @@
     "no-extra-parens": [
       "error",
       "functions"
-    ]
+    ],
+    "no-unused-vars": "off"
   }
 }
