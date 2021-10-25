@@ -1,6 +1,6 @@
 "use strict"
 
-/** @type {{search?: string; lucky?: boolean;}} */
+/** @type {{search: string; lucky?: boolean;}} */
 const query = window.location.search
   .substr(1)
   .split("&")
@@ -40,11 +40,9 @@ window.addEventListener("load", async () => {
   await setMessage("Come on", "Was it really that hard?", "alert-success")
   await new Promise(resolve => setTimeout(resolve, 3000))
 
-  window.location.href = encodeURI(
-    `https://www.google.com/search?q=${query.search}${
-      query.lucky ? "&btnI" : ""
-    }`
-  )
+  window.location.href = `https://www.google.com/search?${
+    query.lucky ? "btnI&" : ""
+  }q=${query.search}`
 })
 
 function makeCursor() {
@@ -55,6 +53,11 @@ function makeCursor() {
   return cursor
 }
 
+/**
+ * Move the cursor to the targeted element
+ * @param {HTMLSpanElement} cursor
+ * @param {HTMLButtonElement} target
+ */
 async function move(cursor, target) {
   return new Promise(resolve => {
     const diffX =
@@ -93,6 +96,12 @@ async function write() {
   }
 }
 
+/**
+ * Set the message box under the search buttons.
+ * @param {string} heading
+ * @param {string} content
+ * @param {string} type
+ */
 async function setMessage(heading, content, type = "alert-primary") {
   const message = document.getElementById("message")
 
@@ -107,22 +116,4 @@ async function setMessage(heading, content, type = "alert-primary") {
 
   message.classList.remove("opacity-0")
   await new Promise(resolve => setTimeout(resolve, 300))
-}
-
-// eslint-disable-next-line no-unused-vars
-function onClickSearch() {
-  onClickButton(false)
-}
-
-// eslint-disable-next-line no-unused-vars
-function onClickLucky() {
-  onClickButton(true)
-}
-
-function onClickButton(lucky = false) {
-  if (!input.validity.valid) return
-  const url = new URL(window.location.href)
-  url.searchParams.set("search", input.value.trim())
-  if (lucky) url.searchParams.set("lucky", "true")
-  window.location.href = url.href
 }

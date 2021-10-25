@@ -42,11 +42,12 @@
     <div class="container">
       <form class="row g-3 text-center mt-5">
         <!-- Google -->
-        <label class="display-1 form-label fw-normal" for="input">
+        <label class="display-1 form-label fw-normal mb-0" for="input">
           <span class="text-primary">G</span><span class="text-danger">o</span
           ><span class="text-warning">o</span><span class="text-primary">g</span
           ><span class="text-success">l</span><span class="text-danger">e</span>
         </label>
+        <small class="text-muted mt-0">Let me Google that for you</small>
 
         <!-- Input -->
         <div
@@ -70,27 +71,22 @@
             name="search"
             placeholder="Search"
             required
-            title="Search"
             type="text"
           />
         </div>
 
         <!-- Actions -->
         <div>
-          <button
-            class="btn btn-light"
-            id="search"
-            onclick="onClickSearch()"
-            type="submit"
-          >
+          <button class="btn btn-light" id="search" type="submit">
             Google Search
           </button>
           <button
             class="btn btn-light"
             id="lucky"
-            onclick="onClickLucky()"
+            name="lucky"
             title="Open the first search result"
-            type="button"
+            type="submit"
+            value="true"
           >
             I'm feeling lucky
           </button>
