@@ -97,6 +97,7 @@ async function write() {
   for (const letter of query.search) {
     await new Promise(resolve => setTimeout(resolve, Math.random() * 200 + 100))
     input.value += letter
+    input.scrollLeft = input.scrollWidth
   }
 }
 
