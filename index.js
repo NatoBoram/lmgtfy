@@ -1,13 +1,14 @@
 "use strict"
 
 /** @type {{search?: string; lucky?: boolean;}} */
-// @ts-ignore
 const query = window.location.search
   .substr(1)
   .split("&")
   .map(keyValue => keyValue.split("="))
   .map(([key, value]) => ({
-    [decodeURIComponent(key)]: decodeURIComponent(value?.replace("+", "%20")),
+    [decodeURIComponent(key)]: decodeURIComponent(
+      value?.replaceAll("+", "%20")
+    ),
   }))
   .reduce((previous, current) => ({ ...previous, ...current }), {})
 
@@ -15,13 +16,12 @@ const query = window.location.search
 let input
 
 window.addEventListener("load", async () => {
-  // @ts-ignore
   input = document.getElementById("input")
   input.value = ""
 
   if (!query.search) return
 
-  await setMessage("Step 1", "Type in your search")
+  await setMessage("Step 1", "Type in your question")
   const cursor = makeCursor()
   await move(cursor, input)
   input.focus()
@@ -37,7 +37,7 @@ window.addEventListener("load", async () => {
   button.focus()
   await new Promise(resolve => setTimeout(resolve, 1000))
 
-  await setMessage("Come on", "Was it that hard?", "alert-success")
+  await setMessage("Come on", "Was it really that hard?", "alert-success")
   await new Promise(resolve => setTimeout(resolve, 3000))
 
   window.location.href = encodeURI(
