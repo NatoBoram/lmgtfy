@@ -1,0 +1,10 @@
+#cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#message {
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}

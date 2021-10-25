@@ -1,0 +1,27 @@
+{
+  "name": "lmgtfy",
+  "description": "Let me Google that for you",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatoBoram/lmgtfy.git"
+  },
+  "keywords": [
+    "Google",
+    "LMGTFY"
+  ],
+  "author": "Nato Boram",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/NatoBoram/lmgtfy/issues"
+  },
+  "homepage": "https://github.com/NatoBoram/lmgtfy#readme",
+  "devDependencies": {
+    "@types/bootstrap": "^5.1.6",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "prettier-eslint": "^13.0.0"
+  }
+}
