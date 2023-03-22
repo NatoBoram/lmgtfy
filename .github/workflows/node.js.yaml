@@ -1,0 +1,32 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        with:
+          cache: pnpm
+          node-version: 19
+      # - uses: actions/cache@v3
+      #   with:
+      #     path: ~/.cache/ms-playwright
+      #     key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - run: pnpm install
+      #- run: npx playwright install
+      - run: pnpm run build
+      - run: pnpm run check
+      #- run: pnpm run test:unit
+      #- run: pnpm run test
+      - run: pnpm run lint

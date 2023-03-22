@@ -1,19 +1,8 @@
 {
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"[css][html][javascript][json][jsonc][markdown][postcss][scss][svelte][typescript][xml][yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.minimap.maxColumn": 100,
+		"editor.rulers": [100]
 	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[markdown]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.rulers": [80],
 	"typescript.tsdk": "node_modules/typescript/lib"
 }
