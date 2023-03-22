@@ -25,11 +25,11 @@ brightness.subscribe(value => {
 	if (browser)
 		switch (value) {
 			case Brightness.dark:
-				document.querySelector('html')?.classList.add('dark')
+				document.documentElement.classList.add('dark')
 				localStorage.setItem('brightness', Brightness.dark)
 				break
 			case Brightness.light:
-				document.querySelector('html')?.classList.remove('dark')
+				document.documentElement.classList.remove('dark')
 				localStorage.setItem('brightness', Brightness.light)
 				break
 		}

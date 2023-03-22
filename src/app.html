@@ -11,6 +11,15 @@
 		<meta property="og:image" content="images/Lmgtfy.png" />
 		<meta property="og:title" content="Let me Google that for you" />
 
+		<!-- Prevents the white flash on page load -->
+		<script>
+			const brightness = localStorage.getItem('brightness')
+
+			if (brightness === 'light') document.documentElement.classList.remove('dark')
+			else if (brightness === 'dark' || matchMedia('(prefers-color-scheme: dark)').matches)
+				document.documentElement.classList.add('dark')
+		</script>
+
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover" class="bg-zinc-50 dark:bg-zinc-800">
