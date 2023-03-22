@@ -28,7 +28,7 @@
 
 		step++
 		await new Promise(resolve => setTimeout(resolve, 1000))
-		// button.click()
+		button.click()
 	})
 
 	/** Move the cursor to the targeted element */
