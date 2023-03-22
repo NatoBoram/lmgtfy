@@ -14,8 +14,8 @@ function adapter() {
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	preprocess: vitePreprocess(),
-	compilerOptions: {},
 
 	kit: {
 		adapter: adapter(),
