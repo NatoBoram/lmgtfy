@@ -1,27 +1,52 @@
 {
-  "name": "lmgtfy",
-  "description": "Let me Google that for you",
-  "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NatoBoram/lmgtfy.git"
-  },
-  "keywords": [
-    "Google",
-    "LMGTFY"
-  ],
-  "author": "Nato Boram",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/NatoBoram/lmgtfy/issues"
-  },
-  "homepage": "https://github.com/NatoBoram/lmgtfy#readme",
-  "devDependencies": {
-    "@types/bootstrap": "^5.1.6",
-    "eslint": "^8.1.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1",
-    "prettier-eslint": "^13.0.0"
-  }
+	"name": "@natoboram/lmgtfy",
+	"version": "0.0.2",
+	"description": "A \"Let Me Google That For You\" clone that's open source and doesn't track you when you share it.",
+	"keywords": [
+		"Google",
+		"LMGTFY"
+	],
+	"homepage": "https://github.com/NatoBoram/lmgtfy",
+	"bugs": {
+		"url": "https://github.com/NatoBoram/lmgtfy/issues"
+	},
+	"license": "AGPL-3.0-or-later",
+	"repository": "github:NatoBoram/lmgtfy",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "playwright test",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@natoboram/heroicons.svelte": "^1.0.1",
+		"@playwright/test": "^1.31.2",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "^2.0.1",
+		"@sveltejs/kit": "^1.13.0",
+		"@typescript-eslint/eslint-plugin": "^5.56.0",
+		"@typescript-eslint/parser": "^5.56.0",
+		"autoprefixer": "^10.4.14",
+		"eslint": "^8.36.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"postcss": "^8.4.21",
+		"prettier": "^2.8.6",
+		"prettier-plugin-svelte": "^2.9.0",
+		"prettier-plugin-tailwindcss": "^0.2.5",
+		"svelte": "^3.57.0",
+		"svelte-check": "^3.1.4",
+		"tailwindcss": "^3.2.7",
+		"tslib": "^2.5.0",
+		"typescript": "^5.0.2",
+		"vite": "^4.2.1",
+		"vitest": "^0.29.7"
+	},
+	"private": true,
+	"type": "module"
 }

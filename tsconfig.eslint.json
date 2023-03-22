@@ -1,0 +1,13 @@
+{
+	"extends": "./tsconfig.json",
+	"include": [
+		".eslintrc.cjs",
+		"playwright.config.ts",
+		"postcss.config.cjs",
+		"src",
+		"svelte.config.js",
+		"tailwind.config.cjs",
+		"tests",
+		"vite.config.ts"
+	]
+}

@@ -1,6 +1,5 @@
 # LMGTFY
 
-A _Let Me Google That For You_ clone that's open source and doesn't track you
-when you share it.
+A _Let Me Google That For You_ clone that's open source and doesn't track you when you share it.
 
-[![Screenshot](https://user-images.githubusercontent.com/10495562/156066600-eae411df-7da9-432c-adb1-38bad63cd9db.png)](https://natoboram.github.io/lmgtfy)
+[![Screenshot](https://user-images.githubusercontent.com/10495562/226774306-ed7aba78-0098-4465-8440-6a41f7931a37.png)](https://natoboram.github.io/lmgtfy)
