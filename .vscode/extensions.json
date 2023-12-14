@@ -3,9 +3,10 @@
 		"davidanson.vscode-markdownlint",
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
+		"github.vscode-github-actions",
+		"github.vscode-pull-request-github",
 		"ms-azuretools.vscode-docker",
 		"ms-vscode.live-server",
-		"svelte.svelte-vscode",
-		"github.vscode-github-actions"
+		"svelte.svelte-vscode"
 	]
 }
