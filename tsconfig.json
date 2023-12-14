@@ -1,40 +1,57 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
+		// Projects
+		"incremental": true,
+		"composite": true,
+
+		// Language and Environment
+		"useDefineForClassFields": true,
+		"moduleDetection": "force",
+
+		// Modules
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"resolvePackageJsonExports": true,
+		"resolvePackageJsonImports": true,
 		"resolveJsonModule": true,
-		"skipLibCheck": true,
+
+		// JavaScript Support
+
+		// Emit
+		"declaration": true,
+		"declarationMap": true,
 		"sourceMap": true,
-		"strict": true,
+
+		// Interop Constraints
+		"forceConsistentCasingInFileNames": true,
+		"verbatimModuleSyntax": true,
 
 		// Type Checking
-		"allowUnreachableCode": false,
-		"allowUnusedLabels": false,
-		"alwaysStrict": true,
-		"exactOptionalPropertyTypes": true,
-		"noFallthroughCasesInSwitch": true,
+		"strict": true,
 		"noImplicitAny": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
 		"noImplicitThis": true,
-		"noPropertyAccessFromIndexSignature": true,
-		"noUncheckedIndexedAccess": true,
+		"useUnknownInCatchVariables": true,
+		"alwaysStrict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"strictBindCallApply": true,
-		"strictFunctionTypes": true,
-		"strictNullChecks": true,
-		"strictPropertyInitialization": true,
-		"useUnknownInCatchVariables": true,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false
 
-		// SvelteKit
-		"moduleResolution": "nodenext"
+		// Completeness
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
-	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
-	// from the referenced tsconfig.json - TypeScript does not merge them in
+	// If you want to overwrite includes/excludes, make sure to copy over the relevant
+	// includes/excludes from the referenced tsconfig.json - TypeScript does not merge them in.
 }

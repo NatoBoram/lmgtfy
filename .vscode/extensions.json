@@ -1,8 +1,12 @@
 {
 	"recommendations": [
+		"davidanson.vscode-markdownlint",
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
+		"github.vscode-github-actions",
+		"github.vscode-pull-request-github",
+		"ms-azuretools.vscode-docker",
 		"ms-vscode.live-server",
-		"davidanson.vscode-markdownlint"
+		"svelte.svelte-vscode"
 	]
 }

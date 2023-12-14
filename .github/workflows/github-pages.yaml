@@ -2,11 +2,13 @@ name: GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    if: ${{ github.actor != 'nektos/act' }}
 
     steps:
       - uses: actions/checkout@v3
@@ -16,10 +18,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: pnpm
-          node-version: 19
-      - run: pnpm install
+          node-version: 21
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run build
-      - uses: actions/upload-pages-artifact@v1
+        env:
+          BUILD_BASE: /lmgtfy
+      - uses: actions/upload-pages-artifact@v2
         with:
           path: build
 
@@ -38,3 +42,4 @@ jobs:
 
     steps:
       - uses: actions/deploy-pages@v1
+        id: deployment

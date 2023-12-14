@@ -9,6 +9,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # Ignore files for PNPM, NPM and YARN
-pnpm-lock.yaml
+/.pnpm-store
 package-lock.json
+pnpm-lock.yaml
 yarn.lock
