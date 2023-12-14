@@ -79,7 +79,7 @@
 	let step = 0
 </script>
 
-<div bind:this={cursor} class="absolute top-0 left-0">
+<div bind:this={cursor} class="absolute left-0 top-0">
 	<ArrowUpLeft />
 </div>
 
