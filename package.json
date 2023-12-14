@@ -22,7 +22,7 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"docker:build": "DOCKER_BUILDKIT=1 docker build --secret id=BUILD_BASE --tag lmgtfy .",
+		"docker:build": "docker build --secret id=BUILD_BASE --tag lmgtfy .",
 		"docker:run": "docker run --publish 127.0.0.1:3000:3000 lmgtfy",
 		"docker:kill": "docker ps --format '{{.Image}} {{.ID}}' | grep lmgtfy | awk '{print $2}' | xargs docker kill"
 	},

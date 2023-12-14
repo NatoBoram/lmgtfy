@@ -23,7 +23,7 @@ jobs:
       #   with:
       #     path: ~/.cache/ms-playwright
       #     key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile --strict-peer-dependencies
       #- run: npx playwright install
       - run: pnpm run build
       - run: pnpm run check

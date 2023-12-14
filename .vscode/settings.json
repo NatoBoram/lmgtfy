@@ -4,5 +4,9 @@
 		"editor.minimap.maxColumn": 100,
 		"editor.rulers": [100]
 	},
+	"files.associations": {
+		"*.eslintignore": "ignore",
+		"*.prettierignore": "ignore"
+	},
 	"typescript.tsdk": "node_modules/typescript/lib"
 }
