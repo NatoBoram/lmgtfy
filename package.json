@@ -21,7 +21,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
 		"lint": "prettier --check . && eslint .",
-		"lint:fix": "eslint --fix . && pnpm run format",
+		"lint:fix": "eslint --fix . && pnpm run format --list-different",
 		"format": "prettier --write .",
 		"docker:build": "docker build --secret id=BUILD_BASE --tag lmgtfy .",
 		"docker:run": "docker run --publish 127.0.0.1:3000:3000 lmgtfy",
