@@ -1,7 +1,7 @@
 import adapterAuto from '@sveltejs/adapter-auto'
 import adapterNode from '@sveltejs/adapter-node'
 import adapterStatic from '@sveltejs/adapter-static'
-import { vitePreprocess } from '@sveltejs/kit/vite'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { loadEnv } from 'vite'
 
 /** @type {{ BUILD_ADAPTER: 'auto' | 'node' | 'static', BUILD_BASE: '' | `/${string}` | undefined, BUILD_IPFS: 'false' | 'true' }} */
