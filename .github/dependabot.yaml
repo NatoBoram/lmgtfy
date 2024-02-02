@@ -34,3 +34,10 @@ updates:
         patterns:
           - '*typescript*'
           - tslib
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+      timezone: America/Toronto
+    commit-message:
+      prefix: '⬆️ '
