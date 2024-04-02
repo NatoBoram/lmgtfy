@@ -56,8 +56,12 @@
 					resolve(undefined)
 				} else {
 					step++
-					cursor.style.top = (parseFloat(cursor.style.top) || 0) + stepY + 'px'
-					cursor.style.left = (parseFloat(cursor.style.left) || 0) + stepX + 'px'
+
+					const top = (parseFloat(cursor.style.top) || 0) + stepY
+					const left = (parseFloat(cursor.style.left) || 0) + stepX
+
+					cursor.style.top = `${top.toString()}px`
+					cursor.style.left = `${left.toString()}px`
 				}
 			}
 		})
