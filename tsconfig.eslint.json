@@ -1,7 +1,7 @@
 {
 	"extends": "./tsconfig.json",
 	"include": [
-		".eslintrc.cjs",
+		"eslint.config.js",
 		"playwright.config.ts",
 		"postcss.config.cjs",
 		"src",

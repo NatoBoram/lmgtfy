@@ -4,6 +4,7 @@
 		"editor.minimap.maxColumn": 100,
 		"editor.rulers": [100]
 	},
+	"eslint.useFlatConfig": true,
 	"files.associations": {
 		"*.eslintignore": "ignore",
 		"*.prettierignore": "ignore"
