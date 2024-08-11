@@ -53,6 +53,7 @@ export default tseslint.config(
 	},
 
 	{
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		extends: [...svelte.configs['flat/recommended'], ...svelte.configs['flat/prettier']],
 		files: ['.svelte'].flatMap(e => [`**/*${e}`, `*${e}`]),
 		languageOptions: {
