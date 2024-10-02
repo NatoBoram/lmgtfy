@@ -30,7 +30,7 @@
 	"devDependencies": {
 		"@eslint/js": "^9.11.1",
 		"@natoboram/heroicons.svelte": "^1.0.6",
-		"@playwright/test": "^1.46.1",
+		"@playwright/test": "^1.47.2",
 		"@sveltejs/adapter-auto": "^3.2.5",
 		"@sveltejs/adapter-node": "^5.2.5",
 		"@sveltejs/adapter-static": "^3.0.5",
