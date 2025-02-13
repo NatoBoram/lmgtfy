@@ -1,12 +1,14 @@
 import { browser } from '$app/environment'
-import { writable } from 'svelte/store'
+import { type Writable, writable } from 'svelte/store'
 
-export enum Brightness {
-	dark = 'dark',
-	light = 'light',
-}
+export const Brightness = {
+	dark: 'dark',
+	light: 'light',
+} as const
 
-function toBrightness(s: string | null): Brightness {
+export type Brightness = (typeof Brightness)[keyof typeof Brightness]
+
+export function toBrightness(s: unknown): Brightness {
 	switch (s) {
 		case 'dark':
 			return Brightness.dark
@@ -17,7 +19,7 @@ function toBrightness(s: string | null): Brightness {
 	}
 }
 
-export const brightness = writable<Brightness>(
+export const brightness: Writable<Brightness> = writable<Brightness>(
 	browser ? toBrightness(localStorage.getItem('brightness')) : Brightness.light,
 )
 
@@ -25,12 +27,24 @@ brightness.subscribe(value => {
 	if (browser)
 		switch (value) {
 			case Brightness.dark:
-				document.documentElement.classList.add('dark')
+				document.documentElement.classList.add(Brightness.light)
 				localStorage.setItem('brightness', Brightness.dark)
 				break
 			case Brightness.light:
-				document.documentElement.classList.remove('dark')
+				document.documentElement.classList.remove(Brightness.dark)
 				localStorage.setItem('brightness', Brightness.light)
 				break
 		}
 })
+
+export function toggleBrightness(current: Brightness): Brightness {
+	switch (current) {
+		case Brightness.dark:
+			brightness.set(Brightness.light)
+			return Brightness.light
+
+		case Brightness.light:
+			brightness.set(Brightness.dark)
+			return Brightness.dark
+	}
+}
