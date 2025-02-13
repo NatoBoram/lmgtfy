@@ -9,6 +9,8 @@
 	import Step3 from './Step3.svelte'
 
 	onMount(async () => {
+		await new Promise(resolve => requestIdleCallback(resolve))
+
 		const btnI = $page.url.searchParams.get('btnI')
 		const btnK = $page.url.searchParams.get('btnK')
 		const q = $page.url.searchParams.get('q')

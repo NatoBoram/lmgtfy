@@ -15,6 +15,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"clean": "rm -rf .svelte-kit build dist docs node_modules tsconfig.tsbuildinfo",
 		"preview": "vite preview",
 		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -47,6 +48,7 @@
 		"prettier-plugin-tailwindcss": "^0.6.11",
 		"svelte": "^4.2.19",
 		"svelte-check": "^3.8.6",
+		"svelte-eslint-parser": "^0.43.0",
 		"tailwindcss": "^3.4.17",
 		"tslib": "^2.7.0",
 		"typescript": "^5.6.3",
