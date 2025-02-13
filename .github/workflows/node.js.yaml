@@ -1,17 +1,21 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: main
+  merge_group:
+    branches:
+      - main
   pull_request:
-    branches: main
+    branches:
+      - main
+  push:
+    branches:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo '${{github.event_name}}'
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
         with:
@@ -38,7 +42,7 @@ jobs:
     permissions:
       contents: write
 
-    if: failure() && github.event_name != 'merge_group' && github.actor != 'github-actions[bot]' && github.actor != 'nektos/act'
+    if: failure() && (github.event_name == 'pull_request' || github.event_name == 'push') && github.actor != 'github-actions[bot]' && github.actor != 'nektos/act'
 
     steps:
       - uses: actions/checkout@v4
