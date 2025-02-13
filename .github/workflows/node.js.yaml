@@ -32,7 +32,7 @@ jobs:
       #- run: npx playwright install
       - run: pnpm run build
       - run: pnpm run check
-      #- run: pnpm run test:unit
+      - run: pnpm run test:unit
       #- run: pnpm run test:integration
       - run: pnpm run lint
 
