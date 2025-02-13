@@ -1,33 +1,36 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		// Projects
+		/* Projects */
 		"incremental": true,
 		"composite": true,
 
-		// Language and Environment
+		/* Language and Environment */
 		"useDefineForClassFields": true,
 		"moduleDetection": "force",
 
-		// Modules
+		/* Modules */
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"resolvePackageJsonExports": true,
 		"resolvePackageJsonImports": true,
 		"resolveJsonModule": true,
 
-		// JavaScript Support
+		/* JavaScript Support */
 
-		// Emit
+		/* Emit */
 		"declaration": true,
 		"declarationMap": true,
 		"sourceMap": true,
 
-		// Interop Constraints
-		"forceConsistentCasingInFileNames": true,
+		/* Interop Constraints */
+		"isolatedModules": true,
 		"verbatimModuleSyntax": true,
+		"isolatedDeclarations": true,
+		"erasableSyntaxOnly": true,
+		"forceConsistentCasingInFileNames": true,
 
-		// Type Checking
+		/* Type Checking */
 		"strict": true,
 		"noImplicitAny": true,
 		"strictNullChecks": true,
@@ -46,12 +49,10 @@
 		"noImplicitOverride": true,
 		"noPropertyAccessFromIndexSignature": true,
 		"allowUnusedLabels": false,
-		"allowUnreachableCode": false
+		"allowUnreachableCode": false,
 
-		// Completeness
+		/* Completeness */
+		"skipDefaultLibCheck": true,
+		"skipLibCheck": true
 	}
-	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
-	//
-	// If you want to overwrite includes/excludes, make sure to copy over the relevant
-	// includes/excludes from the referenced tsconfig.json - TypeScript does not merge them in.
 }

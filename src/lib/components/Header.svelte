@@ -1,22 +1,10 @@
 <script lang="ts">
-	import { Brightness, brightness } from '$lib/stores/brightness.js'
+	import { Brightness, brightness, toggleBrightness } from '$lib/stores/brightness.js'
 	import { Moon, Sun } from '@natoboram/heroicons.svelte/24/solid'
 
 	const icons = {
 		[Brightness.dark]: Sun,
 		[Brightness.light]: Moon,
-	}
-
-	function toggleBrightness(current: Brightness) {
-		switch (current) {
-			case Brightness.dark:
-				brightness.set(Brightness.light)
-				return
-
-			case Brightness.light:
-				brightness.set(Brightness.dark)
-				return
-		}
 	}
 </script>
 
