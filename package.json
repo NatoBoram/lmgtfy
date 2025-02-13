@@ -17,16 +17,18 @@
 		"build": "vite build",
 		"clean": "rm -rf .svelte-kit build dist docs node_modules tsconfig.tsbuildinfo",
 		"preview": "vite preview",
-		"test": "playwright test",
+		"test": "pnpm run test:integration && pnpm run test:unit",
+		"test:integration": "playwright test",
+		"test:unit": "vitest --sequence.concurrent",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test:unit": "vitest",
 		"lint": "prettier --check . && eslint .",
 		"lint:fix": "eslint --fix . && pnpm run format --list-different",
 		"format": "prettier --write .",
 		"docker:build": "docker build --secret id=BUILD_BASE --tag lmgtfy .",
 		"docker:run": "docker run --publish 127.0.0.1:3000:3000 lmgtfy",
-		"docker:kill": "docker ps --format '{{.Image}} {{.ID}}' | grep lmgtfy | awk '{print $2}' | xargs docker kill"
+		"docker:kill": "docker ps --format '{{.Image}} {{.ID}}' | grep lmgtfy | awk '{print $2}' | xargs docker kill",
+		"sync": "svelte-kit sync"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.11.1",
