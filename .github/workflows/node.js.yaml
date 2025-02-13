@@ -33,7 +33,7 @@ jobs:
       - run: pnpm run build
       - run: pnpm run check
       #- run: pnpm run test:unit
-      #- run: pnpm run test
+      #- run: pnpm run test:integration
       - run: pnpm run lint
 
   fix:
@@ -84,6 +84,7 @@ jobs:
           skip-empty: true
 
       - run: |
+          pnpm run sync
           pnpm run lint:fix
           git add .
       - id: commit-lint
