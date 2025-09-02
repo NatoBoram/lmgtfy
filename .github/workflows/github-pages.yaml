@@ -23,7 +23,7 @@ jobs:
       - run: pnpm run build
         env:
           BUILD_BASE: /lmgtfy
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: build
 
