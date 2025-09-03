@@ -24,8 +24,8 @@ importers:
         specifier: ^5.2.12
         version: 5.2.12(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))
       '@sveltejs/adapter-static':
-        specifier: ^3.0.8
-        version: 3.0.8(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))
+        specifier: ^3.0.9
+        version: 3.0.9(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))
       '@sveltejs/kit':
         specifier: ^2.20.6
         version: 2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5))
@@ -66,8 +66,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3(prettier@3.6.2)(svelte@4.2.19)
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.11
-        version: 0.6.11(prettier-plugin-svelte@3.3.3(prettier@3.6.2)(svelte@4.2.19))(prettier@3.6.2)
+        specifier: ^0.6.14
+        version: 0.6.14(prettier-plugin-svelte@3.3.3(prettier@3.6.2)(svelte@4.2.19))(prettier@3.6.2)
       svelte:
         specifier: ^4.2.19
         version: 4.2.19
@@ -614,8 +614,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
-  '@sveltejs/adapter-static@3.0.8':
-    resolution: {integrity: sha512-YaDrquRpZwfcXbnlDsSrBQNCChVOT9MGuSg+dMAyfsAa1SmiAhrA5jUYUiIMC59G92kIbY/AaQOWcBdq+lh+zg==}
+  '@sveltejs/adapter-static@3.0.9':
+    resolution: {integrity: sha512-aytHXcMi7lb9ljsWUzXYQ0p5X1z9oWud2olu/EpmH7aCu4m84h7QLvb5Wp+CFirKcwoNnYvYWhyP/L8Vh1ztdw==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
@@ -1748,11 +1748,13 @@ packages:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
 
-  prettier-plugin-tailwindcss@0.6.11:
-    resolution: {integrity: sha512-YxaYSIvZPAqhrrEpRtonnrXdghZg1irNg4qrjboCXrpybLWVs55cW2N3juhspVJiO0JBvYJT8SYsJpc8OQSnsA==}
+  prettier-plugin-tailwindcss@0.6.14:
+    resolution: {integrity: sha512-pi2e/+ZygeIqntN+vC573BcW5Cve8zUB0SSAGxqpB4f96boZF4M3phPVoOFCeypwkpRYdi7+jQ5YJJUwrkGUAg==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-hermes': '*'
+      '@prettier/plugin-oxc': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
@@ -1771,6 +1773,10 @@ packages:
       prettier-plugin-svelte: '*'
     peerDependenciesMeta:
       '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-hermes':
+        optional: true
+      '@prettier/plugin-oxc':
         optional: true
       '@prettier/plugin-pug':
         optional: true
@@ -2620,7 +2626,7 @@ snapshots:
       '@sveltejs/kit': 2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5))
       rollup: 4.34.0
 
-  '@sveltejs/adapter-static@3.0.8(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))':
+  '@sveltejs/adapter-static@3.0.9(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))':
     dependencies:
       '@sveltejs/kit': 2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5)))(svelte@4.2.19)(vite@5.4.19(@types/node@18.15.5))
 
@@ -3788,7 +3794,7 @@ snapshots:
       prettier: 3.6.2
       svelte: 4.2.19
 
-  prettier-plugin-tailwindcss@0.6.11(prettier-plugin-svelte@3.3.3(prettier@3.6.2)(svelte@4.2.19))(prettier@3.6.2):
+  prettier-plugin-tailwindcss@0.6.14(prettier-plugin-svelte@3.3.3(prettier@3.6.2)(svelte@4.2.19))(prettier@3.6.2):
     dependencies:
       prettier: 3.6.2
     optionalDependencies:
