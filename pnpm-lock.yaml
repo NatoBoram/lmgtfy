@@ -24,8 +24,8 @@ importers:
         specifier: ^5.2.12
         version: 5.2.12(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))
       '@sveltejs/adapter-static':
-        specifier: ^3.0.9
-        version: 3.0.9(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))
+        specifier: ^3.0.10
+        version: 3.0.10(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))
       '@sveltejs/kit':
         specifier: ^2.20.6
         version: 2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19))
@@ -619,8 +619,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
-  '@sveltejs/adapter-static@3.0.9':
-    resolution: {integrity: sha512-aytHXcMi7lb9ljsWUzXYQ0p5X1z9oWud2olu/EpmH7aCu4m84h7QLvb5Wp+CFirKcwoNnYvYWhyP/L8Vh1ztdw==}
+  '@sveltejs/adapter-static@3.0.10':
+    resolution: {integrity: sha512-7D9lYFWJmB7zxZyTE/qxjksvMqzMuYrrsyh1f4AlZqeZeACPRySjbC3aFiY55wb1tWUaKOQG9PVbm74JcN2Iew==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
@@ -2636,7 +2636,7 @@ snapshots:
       '@sveltejs/kit': 2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19))
       rollup: 4.34.0
 
-  '@sveltejs/adapter-static@3.0.9(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))':
+  '@sveltejs/adapter-static@3.0.10(@sveltejs/kit@2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))':
     dependencies:
       '@sveltejs/kit': 2.20.6(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19)))(svelte@4.2.19)(vite@5.4.20(@types/node@20.19.19))
 
