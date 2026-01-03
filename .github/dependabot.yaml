@@ -11,9 +11,19 @@ updates:
       patch:
         update-types:
           - patch
+      minor-development:
+        update-types:
+          - minor
+        dependency-type: development
+      minor-production:
+        update-types:
+          - minor
+        dependency-type: production
       eslint:
         patterns:
           - '*eslint*'
+          - globals
+          - jiti
       tailwindcss:
         patterns:
           - '*heroicons*'
@@ -34,7 +44,23 @@ updates:
         patterns:
           - '*typescript*'
           - tslib
+
   - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+      timezone: America/Toronto
+    commit-message:
+      prefix: '⬆️ '
+    groups:
+      actions:
+        patterns:
+          - actions/*
+      docker:
+        patterns:
+          - docker/*
+
+  - package-ecosystem: docker
     directory: /
     schedule:
       interval: monthly
