@@ -41,7 +41,7 @@
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"@testing-library/svelte": "^4.2.3",
 		"@testing-library/user-event": "^14.6.1",
-		"autoprefixer": "^10.4.22",
+		"autoprefixer": "^10.4.23",
 		"eslint": "^9.21.0",
 		"eslint-config-prettier": "^10.0.2",
 		"eslint-plugin-svelte": "^2.46.1",
